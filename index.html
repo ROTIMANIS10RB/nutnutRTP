@@ -1,32 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<h1>
-
-     <h1>MORNING, HAVE A NICE DAY</h1>
-	<title>I Love You</title>
-   
-    
-	<style>
-		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			text-align: center;
-		}
-		
-		h1 {
-			color: #ff69b4;
-			font-size: 50px;
-			margin-top: 100px;
-		}
-		
-		.heart {
-			color: #ff0000;
-			font-size: 100px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding-top: 20vh;
+        }
+        .input-form {
+            margin-bottom: 20px;
+        }
+        .input-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .input-form input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-	<h1>I <span class="heart">&hearts;</span> You</h1>
+    <h1>LOGIN</h1>
+    <form id="myForm">
+        <div class="input-form">
+            <label for="name">Masukin Nama Ya</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <button class="button" type="submit">Submit</button>
+    </form>
+    <div id="message" class="message"></div>
+    
+    <body style="background-color:#0B7FFF;">
+
+    <script>
+        const form = document.getElementById('myForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            message.innerHTML = `Good Morning, ${name}! Have a nice day, Lop You!`;
+        });
+    </script>
 </body>
 </html>
