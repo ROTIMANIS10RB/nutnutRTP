@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>Welcomei</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #ffffcc;
             text-align: center;
             padding-top: 20vh;
         }
@@ -26,26 +26,28 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 10px;
         }
         .message {
-            font-size: 24px;
+            font-size: 36px;
             margin-top: 20px;
-            color: #666;
+            color: #ff9900;
+            text-shadow: 2px 2px #ccc;
         }
     </style>
 </head>
 <body>
-    <h1>LOGIN</h1>
+    <h1>Welcome</h1>
     <form id="myForm">
         <div class="input-form">
-            <label for="name">Masukin Nama Kamu yah^^</label>
+            <label for="name">Masukin Nama Kamu yah^^:</label>
             <input type="text" id="name" name="name" required>
         </div>
-        <button class="button" type="submit">Submit</button>
+        <button class="button" type="submit">Klik Aku Dong</button>
     </form>
     <div id="message" class="message"></div>
-    
-    <body style="background-color:#0B7FFF;">
 
     <script>
         const form = document.getElementById('myForm');
@@ -54,7 +56,7 @@
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            message.innerHTML = `Good Morning, ${name}! Have a nice day, Lop You! Hehe`;
+            message.innerHTML = `Selamat Pagi, ${name}! Jangan lupa Senyum ya , Lop You hehe!`;
         });
     </script>
 </body>
