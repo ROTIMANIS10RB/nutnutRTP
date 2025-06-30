@@ -3,61 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>PRANK!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffcc;
+            background-color: #000;
             text-align: center;
             padding-top: 20vh;
-        }
-        .input-form {
-            margin-bottom: 20px;
-        }
-        .input-form label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .input-form input {
-            padding: 10px;
-            font-size: 16px;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #ffcc00;
-            border: none;
-            border-radius: 10px;
+            color: #fff;
         }
         .message {
             font-size: 36px;
             margin-top: 20px;
-            color: #ff9900;
-            text-shadow: 2px 2px #ccc;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <form id="myForm">
-        <div class="input-form">
-            <label for="name">Masukin Nama Kamu yah^^:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <button class="button" type="submit">Klik Aku Dong</button>
-    </form>
-    <div id="message" class="message"></div>
+    <h1>PERINGATAN!</h1>
+    <div id="message" class="message">Kamu telah dipilih untuk menjadi korban prank hari ini!</div>
 
     <script>
-        const form = document.getElementById('myForm');
-        const message = document.getElementById('message');
+        const messages = [
+            "Haha kamu telah menjadi sasaran empuk ku",
+            "Dan aku akan menjadi milik mu",
+            "ADEK BELI 2 AYAM 1 AYAM 250rb ya dek BERATI TOTAL 500RB",
+            "Deal ya dekk INGGAATT SAHABATT",
+        ];
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            message.innerHTML = `Selamat Pagi, ${name}! Jangan lupa Senyum ya , Lop You hehe!`;
-        });
+        let i = 0;
+        setInterval(() => {
+            document.getElementById("message").innerHTML = messages[i];
+            i = (i + 1) % messages.length;
+        }, 1000);
     </script>
 </body>
 </html>
