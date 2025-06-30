@@ -1,41 +1,52 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRANK!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            text-align: center;
-            padding-top: 20vh;
-            color: #fff;
-        }
-        .message {
-            font-size: 36px;
-            margin-top: 20px;
-        }
-    </style>
+	<title>Confess</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+		
+		#confess {
+			width: 300px;
+			height: 200px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 50px auto;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		
+		#tombol {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#tombol:hover {
+			background-color: #0056b3;
+		}
+	</style>
 </head>
 <body>
-    <h1>PERINGATAN!</h1>
-    <div id="message" class="message">Kamu telah dipilih untuk menjadi korban prank hari ini!</div>
-
-    <script>
-        const messages = [
-            "Selamat malam kakak awak",
-            "Jangan bobok ya kak di depan nanti ke cut",
-            "akwoakoakaoak",
-            "tapi tumben ga congok lagi kak",
-        ];
-
-        let i = 0;
-        setInterval(() => {
-            document.getElementById("message").innerHTML = messages[i];
-            i = (i + 1) % messages.length;
-        }, 1000);
-    </script>
+	<div id="confess">
+		<h2>Pesan Rahasia</h2>
+		<p id="pesan">Hai Irfan, aku ingin bilang sesuatu nih...</p>
+		<button id="tombol" onclick="confess()">Klik AKu</button>
+		<p id="hasil"></p>
+	</div>
+	
+	<script>
+		function confess() {
+			document.getElementById("pesan").innerHTML = "Aku suka kamu!";
+			document.getElementById("hasil").innerHTML = "Aku harap kamu juga suka sama aku hehe^^";
+		}
+	</script>
 </body>
 </html>
