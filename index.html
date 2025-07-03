@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Confess</title>
+	<title>Prank Lucu</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
 			background-color: #f2f2f2;
-			text-align: center;
 		}
 		
-		#confess {
-			width: 300px;
-			height: 200px;
-			background-color: #51C55C;
-			border: 1px solid #ddd;
-			border-radius: 10px;
-			padding: 20px;
-			margin: 50px auto;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		#prank {
+			font-size: 36px;
+			font-weight: bold;
+			color: #007bff;
+			animation: bergetar 0.5s infinite;
 		}
 		
-		#tombol {
-			background-color: #007bff;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		
-		#tombol:hover {
-			background-color: #0056b3;
+		@keyframes bergetar {
+			0% {
+				transform: rotate(0deg);
+			}
+			25% {
+				transform: rotate(10deg);
+			}
+			50% {
+				transform: rotate(0deg);
+			}
+			75% {
+				transform: rotate(-10deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
 		}
 	</style>
 </head>
 <body>
-	<div id="confess">
-		<h2>Pesan Rahasia</h2>
-		<p id="pesan">Hai Reza, Ada Pesan nih buat kamu^^</p>
-		<button id="tombol" onclick="confess()">Klik AKu</button>
-		<p id="hasil"></p>
-	</div>
-	
-	<script>
-		function confess() {
-			document.getElementById("pesan").innerHTML = "Abang hari ini offday dek";
-			document.getElementById("hasil").innerHTML = "Satuan kekuatan dek jaga bumi kawoawkaow";
-		}
-	</script>
+	<center>
+		<div id="prank">KOMPUTERMU AKAN MELEDAK BENTAR LAGI!</div>
+	</center>
 </body>
 </html>
