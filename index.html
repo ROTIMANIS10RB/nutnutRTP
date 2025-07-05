@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prank Lucu</title>
+	<title>Prank</title>
 	<style>
 		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
+			background-color: #000;
+			color: #fff;
 		}
 		
 		#prank {
-			font-size: 36px;
+			font-size: 48px;
 			font-weight: bold;
-			color: #007bff;
-			animation: bergetar 0.5s infinite;
+			text-align: center;
+			margin-top: 20%;
+			animation: berkedip 1s infinite;
 		}
 		
-		@keyframes bergetar {
+		@keyframes berkedip {
 			0% {
-				transform: rotate(0deg);
-			}
-			25% {
-				transform: rotate(10deg);
+				opacity: 1;
 			}
 			50% {
-				transform: rotate(0deg);
-			}
-			75% {
-				transform: rotate(-10deg);
+				opacity: 0;
 			}
 			100% {
-				transform: rotate(0deg);
+				opacity: 1;
 			}
 		}
 	</style>
 </head>
 <body>
-	<center>
-		<div id="prank">SELAMAT PAGI SAYANG KU SEMANGAT YAA PAGI INI !!</div>
-	</center>
+	<div id="prank">KOMPUTER KAMU AKAN MELEDAK!</div>
 </body>
 </html>
